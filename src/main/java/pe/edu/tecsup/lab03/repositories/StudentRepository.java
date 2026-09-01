@@ -25,7 +25,7 @@ public class StudentRepository {
         }
         return student;
     }
-    public List<StudentEntity> findAll() {
+    public pe.edu.tecsup.lab03.repositories.List<StudentEntity> findAll() {
         return new ArrayList<>(students);
     }
 
