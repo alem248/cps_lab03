@@ -114,7 +114,6 @@ public class StudentController extends HttpServlet {
         }
     }
 
-    // Método privado para eliminar estudiante
     private void deleteStudent(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
