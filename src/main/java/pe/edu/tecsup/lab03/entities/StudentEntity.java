@@ -7,17 +7,32 @@ public class StudentEntity {
     private String apellido;
     private String carrera;
     private String cicloActual;
+    private String email;
+    private String estado;
 
     // Constructor vacío
     public StudentEntity() {
     }
 
-    // Constructor completo
-    public StudentEntity(String nombre, String apellido, String carrera, String cicloActual) {
+    // Constructor completo actualizado con id y nuevos campos
+    public StudentEntity(Long id, String nombre, String apellido, String carrera, String cicloActual, String email, String estado) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.carrera = carrera;
         this.cicloActual = cicloActual;
+        this.email = email;
+        this.estado = estado;
+    }
+
+    // Constructor sin id (para nuevos registros)
+    public StudentEntity(String nombre, String apellido, String carrera, String cicloActual, String email, String estado) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.carrera = carrera;
+        this.cicloActual = cicloActual;
+        this.email = email;
+        this.estado = estado;
     }
 
     // Getters y Setters
@@ -61,6 +76,22 @@ public class StudentEntity {
         this.cicloActual = cicloActual;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
         return "StudentEntity{" +
@@ -69,6 +100,8 @@ public class StudentEntity {
                 ", apellido='" + apellido + '\'' +
                 ", carrera='" + carrera + '\'' +
                 ", cicloActual='" + cicloActual + '\'' +
+                ", email='" + email + '\'' +
+                ", estado='" + estado + '\'' +
                 '}';
     }
 }
