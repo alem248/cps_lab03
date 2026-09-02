@@ -92,10 +92,10 @@ public class StudentController extends HttpServlet {
             throws IOException, ServletException {
 
         String idParam = request.getParameter("id");
-        String nombre = request.getParameter("nombre");
-        String apellido = request.getParameter("apellido");
-        String carrera = request.getParameter("carrera");
-        String cicloActual = request.getParameter("cicloActual");
+        String nombre = request.getParameter("Nombre");
+        String apellido = request.getParameter("Apellido");
+        String carrera = request.getParameter("Carrera");
+        String cicloActual = request.getParameter("Ciclo actual");
 
         StudentEntity student = new StudentEntity();
         student.setId(Long.parseLong(idParam));
